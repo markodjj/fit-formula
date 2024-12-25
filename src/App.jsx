@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import BMRCalculator from './components/BMRCalculator.JSX'
-import TDEECalculator from './components/TDEECalculator.JSX'
+import BMRCalculator from './components/BMRCalculator.jsx'
+import TDEECalculator from './components/TDEECalculator.jsx'
 import CaloriesCalculator from './components/CaloriesCalculator.jsx'
-import CaloriesTable from './components/CaloriesTable.JSX'
+import CaloriesTable from './components/CaloriesTable.jsx'
 
 import Home from './pages/Home.jsx';
 
