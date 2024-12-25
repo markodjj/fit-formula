@@ -1,12 +1,27 @@
-import './index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import BMRCalculator from './components/BMRCalculator.JSX'
+import TDEECalculator from './components/TDEECalculator.JSX'
+import CaloriesCalculator from './components/CaloriesCalculator.jsx'
+import CaloriesTable from './components/CaloriesTable.JSX'
+
+import Home from './pages/Home.jsx';
 
 function App() {
+ 
   return (
-    <div className="bg-blue-500 text-white p-4 rounded-md shadow-md">
-      <h1 className="text-2xl font-bold">Hello, Vite + React + Tailwind!</h1>
-    </div>
-  );
+   
+    <BrowserRouter>
+      <Home />
+      <Routes>
+        <Route path='/bmr-kalkulator' element={<BMRCalculator />} />
+        <Route path='/tdee-kalkulator' element={<TDEECalculator />} />
+        <Route path='/kalorije-kalkulator' element={<CaloriesCalculator />} />
+        <Route path='/tablica/:type' element={<CaloriesTable />} />
+      </Routes>
+    </BrowserRouter>
+
+  )
 }
 
-export default App;
-
+export default App
